@@ -2,6 +2,7 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { User } from './types';
 import { API_BASE_URL, http } from './http';
 
+// get users list custom query
 const usersListQueryKey = ['users'];
 export const useGetUsersListQuery = () => {
   return useQuery({
@@ -10,6 +11,7 @@ export const useGetUsersListQuery = () => {
   });
 };
 
+// mutation to create a user and update the users list in the cache
 export const useCreateUserMutation = () => {
   const queryClient = useQueryClient();
   return useMutation({
@@ -28,6 +30,7 @@ export const useCreateUserMutation = () => {
   });
 };
 
+// mutation to update a user and update the users list in the cache
 export const useUpdateUserMutation = () => {
   const queryClient = useQueryClient();
   return useMutation({
