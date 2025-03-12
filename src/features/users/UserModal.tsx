@@ -122,7 +122,7 @@ export const UserModal: FC<UserModalProps> = ({ open, onClose, user }) => {
         </DialogContent>
         <DialogActions sx={{ paddingY: 2, paddingX: 3 }}>
           <Button variant="outlined" onClick={close} disabled={userMutation.isPending}>
-            Cancel
+            Close
           </Button>
           <Button variant="contained" type="submit" loading={userMutation.isPending} loadingPosition="start">
             Save
